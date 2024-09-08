@@ -25,7 +25,8 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
 
   ApiClient client= ApiClient();
-final TextEditingController textEditingController =TextEditingController();
+  bool isLoading = true;
+  final TextEditingController textEditingController =TextEditingController();
   // setting colors for app
   Color mainColor = const Color(0xff212936);
   Color secondryColor = const Color(0xff2849e5);
@@ -40,15 +41,27 @@ final TextEditingController textEditingController =TextEditingController();
   Future<List<String>> getCurrencyList() async{
     return await client.getCurrencies();
   }
+
+  Future<void> fetchCurrencies() async {
+  try {
+    List<String> list = await client.getCurrencies();
+    setState(() {
+      currencies = list;
+      isLoading = false;
+    });
+  } catch (e) {
+    print("Error fetching currencies: $e");
+    setState(() {
+      isLoading = false;
+    });
+  }
+}
+
+
   @override
   void initState() {
     super.initState();
-    (() async{
-        List<String> list = await client.getCurrencies();
-        setState(() {
-          currencies = list;
-        });
-    })();
+    fetchCurrencies();
   }
 
   @override
@@ -68,7 +81,10 @@ final TextEditingController textEditingController =TextEditingController();
       body:SafeArea(
         child: Padding(
           padding:const EdgeInsets.symmetric(horizontal: 14.0,vertical: 16.0),
-          child: Column(
+           child: isLoading
+              ? const Center(
+                  child: CircularProgressIndicator(color: Colors.yellow))
+              :Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -81,7 +97,7 @@ final TextEditingController textEditingController =TextEditingController();
                       Container(
                         width: double.infinity,
                         padding: const EdgeInsets.all(16.0),
-                        margin: const EdgeInsets.only(bottom:80.0),
+                        margin: const EdgeInsets.only(bottom:60.0),
                         decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(8.0),
@@ -186,7 +202,7 @@ final TextEditingController textEditingController =TextEditingController();
                           onPressed: ()async{
                               rate = await client.getRate(from,to);
                               setState(() {
-                                result = (rate * double.parse(textEditingController.text)).toStringAsFixed(3);
+                                result = (rate * double.parse(textEditingController.text)).toStringAsFixed(2);
                               });
                           },
                           style:ElevatedButton.styleFrom(

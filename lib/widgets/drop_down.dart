@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 Widget customDropDown(List<String> items, String value, void onChange(val)){
   return Container(
-    padding: const EdgeInsets.symmetric(vertical: 3.0, horizontal: 55.0),
+    padding: const EdgeInsets.symmetric(vertical: 3.0, horizontal: 40.0),
     decoration: BoxDecoration(
       color: Colors.white,
       borderRadius: BorderRadius.circular(8.0),
