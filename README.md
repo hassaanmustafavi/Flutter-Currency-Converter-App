@@ -14,7 +14,7 @@ This Flutter-based **Currency Converter App** allows users to convert between di
 - Responsive design for mobile
 
 ## Screenshots
-<img src="https://github.com/hassaanmustafavi/currency_convertor/blob/main/lib/assets/ScreenShots/ScreenShot_1.jpg)" width="250" height="500"/>
+<img src="https://github.com/hassaanmustafavi/currency_convertor/blob/main/lib/assets/ScreenShots/ScreenShot_1.jpg" width="250" height="500"/>
 
 ![Currency Converter](https://github.com/hassaanmustafavi/currency_convertor/blob/main/lib/assets/ScreenShots/ScreenShot_1.jpg)
 ![Currency Converter](https://github.com/hassaanmustafavi/currency_convertor/blob/main/lib/assets/ScreenShots/ScreenShot_2.jpg)
