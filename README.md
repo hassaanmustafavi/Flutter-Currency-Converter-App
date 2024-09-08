@@ -58,7 +58,7 @@ This Flutter-based **Currency Converter App** allows users to convert between di
     ```
 
 ### Folder Structure
-<img src="https://github.com/hassaanmustafavi/currency_convertor/blob/main/lib/assets/ScreenShots/Folder_Structure.jpg" width="220" height="240"/>
+<img src="https://github.com/hassaanmustafavi/currency_convertor/blob/main/lib/assets/ScreenShots/Folder_Structure.png" width="220" height="240"/>
 
 
 ### How It Works
