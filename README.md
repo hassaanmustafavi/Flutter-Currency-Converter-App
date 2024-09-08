@@ -15,8 +15,8 @@ This Flutter-based **Currency Converter App** allows users to convert between di
 
 ## Screenshots
 
-![Currency Converter](https://github.com/yourusername/currency_convertor/blob/main/lib/assets/ScreenShots/ScreenShot_1.jpg)
-![Currency Converter](https://github.com/yourusername/currency_convertor/blob/main/lib/assets/ScreenShots/ScreenShot_2.jpg)
+![Currency Converter](https://github.com/hassaanmustafavi/currency_convertor/blob/main/lib/assets/ScreenShots/ScreenShot_1.jpg)
+![Currency Converter](https://github.com/hassaanmustafavi/currency_convertor/blob/main/lib/assets/ScreenShots/ScreenShot_2.jpg)
 
 ## Getting Started
 
@@ -59,7 +59,7 @@ This Flutter-based **Currency Converter App** allows users to convert between di
     ```
 
 ### Folder Structure
-![Currency Converter](https://github.com/yourusername/currency_convertor/blob/main/lib/assets/ScreenShots/Folder_Structure.jpg)
+![Currency Converter](https://github.com/hassaanmustafavi/currency_convertor/blob/main/lib/assets/ScreenShots/Folder_Structure.jpg)
 
 
 ### How It Works
